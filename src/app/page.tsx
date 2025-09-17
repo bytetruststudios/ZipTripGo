@@ -70,7 +70,7 @@ export default function TravelGuideLanding() {
           <div className="flex items-center gap-3">
             {LOGO_SVG}
             <span className="text-xl font-semibold tracking-tight">
-              Voyage <span className="text-sky-400">Guides</span>
+              ZipTrip<span className="text-sky-400">Go</span>
             </span>
           </div>
           <nav className="hidden md:flex items-center gap-6 text-sm text-slate-100">
@@ -278,7 +278,7 @@ export default function TravelGuideLanding() {
         <div className="mx-auto max-w-7xl px-6 py-16">
           <h2 className="text-2xl md:text-4xl font-semibold text-white">Our Mission</h2>
           <p className="mt-2 text-slate-200 max-w-2xl">
-            At Voyage Guides, our mission is to provide more than just travel tips; we offer a window into the soul of each destination. We believe that true travel is about connecting with people, understanding history, and savoring local flavors. Our dedicated team of travel enthusiasts and local experts curates every guide to ensure it&apos;s authentic, practical, and inspiring.
+            At ZipTripGo, our mission is to provide more than just travel tips; we offer a window into the soul of each destination. We believe that true travel is about connecting with people, understanding history, and savoring local flavors. Our dedicated team of travel enthusiasts and local experts curates every guide to ensure it&apos;s authentic, practical, and inspiring.
           </p>
         </div>
       </section>
@@ -395,7 +395,7 @@ export default function TravelGuideLanding() {
       {/* Footer */}
       <footer className="border-t border-slate-800/60">
         <div className="mx-auto max-w-7xl px-6 py-10 text-sm text-slate-200 flex flex-col md:flex-row items-center justify-between gap-4">
-          <div className="flex items-center gap-2">{LOGO_SVG}<span>Voyage Guides</span></div>
+          <div className="flex items-center gap-2">{LOGO_SVG}<span>ZipTripGo</span></div>
           <div className="flex items-center gap-4">
             <a className="hover:text-white" href="#destinations">Destinations</a>
             <a className="hover:text-white" href="#about">About</a>
@@ -407,7 +407,7 @@ export default function TravelGuideLanding() {
             <a className="flex items-center gap-2 hover:text-white" href="https://www.linkedin.com" target="_blank" rel="noreferrer"><Linkedin className="h-4 w-4"/> LinkedIn</a>
             <a className="flex items-center gap-2 hover:text-white" href={CONTACT_LINK}><Ticket className="h-4 w-4"/> Fiverr</a>
           </div>
-          <div>© {new Date().getFullYear()} Voyage Guides. All rights reserved.</div>
+          <div>© {new Date().getFullYear()} ZipTripGo. All rights reserved.</div>
         </div>
       </footer>
 

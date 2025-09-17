@@ -16,14 +16,14 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Voyage Guides – Your Ultimate Travel Companion",
+  title: "ZipTripGo – Your Ultimate Travel Companion",
   description: "Find your next adventure with our comprehensive travel guides on culture, cuisine, flights, and must-see destinations.",
   alternates: { canonical: "https://your-travel-domain.com" },
   openGraph: {
-    title: "Voyage Guides",
+    title: "ZipTripGo",
     description: "Your ultimate guide to unforgettable travel, authentic culture, and local cuisine.",
     url: "https://your-travel-domain.com",
-    siteName: "Voyage Guides",
+    siteName: "ZipTripGo",
     images: [{ url: "/og-travel.png", width: 1200, height: 630 }],
   },
   twitter: { card: "summary_large_image" },
@@ -61,7 +61,7 @@ export default function RootLayout({
 {JSON.stringify({
   "@context": "https://schema.org",
   "@type": "TravelAgency",
-  "name": "Voyage Guides",
+  "name": "ZipTripGo",
   "url": "https://your-travel-domain.com",
   "sameAs": ["https://github.com/your-org", "https://www.linkedin.com/company/your-org", "https://www.fiverr.com/your-org"],
 })}
