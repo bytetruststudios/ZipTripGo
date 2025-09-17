@@ -16,15 +16,15 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "ByteTrust Studios – AI automations & Next.js apps",
-  description: "We build AI automations, Next.js web apps, and custom software—fast, secure, and reliable.",
-  alternates: { canonical: "https://your-domain.com" },
+  title: "Voyage Guides – Your Ultimate Travel Companion",
+  description: "Find your next adventure with our comprehensive travel guides on culture, cuisine, flights, and must-see destinations.",
+  alternates: { canonical: "https://your-travel-domain.com" },
   openGraph: {
-    title: "ByteTrust Studios",
-    description: "AI automations & Next.js apps in weeks—not months.",
-    url: "https://your-domain.com",
-    siteName: "ByteTrust Studios",
-    images: [{ url: "/og.png", width: 1200, height: 630 }],
+    title: "Voyage Guides",
+    description: "Your ultimate guide to unforgettable travel, authentic culture, and local cuisine.",
+    url: "https://your-travel-domain.com",
+    siteName: "Voyage Guides",
+    images: [{ url: "/og-travel.png", width: 1200, height: 630 }],
   },
   twitter: { card: "summary_large_image" },
   icons: {
@@ -39,9 +39,8 @@ export const metadata: Metadata = {
       { rel: "android-chrome", url: "/android-chrome-512x512.png", sizes: "512x512" },
     ],
   },
-  themeColor: "#0f172a", // optional: tab theme color
+  themeColor: "#0f172a",
 };
-
 
 
 export default function RootLayout({
@@ -55,14 +54,16 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         {children}
+        <Analytics />
+        <SpeedInsights />
       </body>
       <Script id="org-jsonld" type="application/ld+json">
 {JSON.stringify({
   "@context": "https://schema.org",
-  "@type": "Organization",
-  name: "ByteTrust Studios",
-  url: "https://your-domain.com",
-  sameAs: ["https://github.com/your", "https://www.linkedin.com/company/your", "https://www.fiverr.com/your"],
+  "@type": "TravelAgency",
+  "name": "Voyage Guides",
+  "url": "https://your-travel-domain.com",
+  "sameAs": ["https://github.com/your-org", "https://www.linkedin.com/company/your-org", "https://www.fiverr.com/your-org"],
 })}
 </Script>
     </html>
