@@ -8,7 +8,6 @@ import {
   Globe,
   Utensils,
   MapPin,
-  Compass,
   MessageSquare,
   Github,
   Linkedin,
@@ -228,19 +227,19 @@ export default function TravelGuideLanding() {
               {
                 title: 'Tokyo, Japan',
                 description: 'A blend of tradition and modernity.',
-                img: 'https://dummyimage.com/1200x720/0b1220/14213d.png&text=Tokyo, Japan',
+                img: '/images/tokyo.jpg',
                 icon: <Globe />,
               },
               {
                 title: 'Paris, France',
                 description: 'The city of love and art.',
-                img: 'https://dummyimage.com/1200x720/0b1220/14213d.png&text=Paris, France',
+                img: '/images/paris.jpg',
                 icon: <Globe />,
               },
               {
                 title: 'Cairo, Egypt',
                 description: 'Ancient history and vibrant markets.',
-                img: 'https://dummyimage.com/1200x720/0b1220/14213d.png&text=Cairo, Egypt',
+                img: '/images/cairo.jpg',
                 icon: <Globe />,
               },
             ].map((d) => (
@@ -249,9 +248,11 @@ export default function TravelGuideLanding() {
                 className="group bg-slate-900/60 border-slate-800 hover:border-sky-700/60 transition overflow-hidden"
               >
                 <div className="relative">
-                  <img
+                  <Image
                     src={d.img}
                     alt={d.title}
+                    width={1200}
+                    height={720}
                     className="w-full h-56 object-cover opacity-80 transition-transform duration-500 ease-out group-hover:scale-[1.04] will-change-transform"
                   />
                   {/* Contrast overlay over the image */}
@@ -277,7 +278,7 @@ export default function TravelGuideLanding() {
         <div className="mx-auto max-w-7xl px-6 py-16">
           <h2 className="text-2xl md:text-4xl font-semibold text-white">Our Mission</h2>
           <p className="mt-2 text-slate-200 max-w-2xl">
-            At Voyage Guides, our mission is to provide more than just travel tips; we offer a window into the soul of each destination. We believe that true travel is about connecting with people, understanding history, and savoring local flavors. Our dedicated team of travel enthusiasts and local experts curates every guide to ensure it's authentic, practical, and inspiring.
+            At Voyage Guides, our mission is to provide more than just travel tips; we offer a window into the soul of each destination. We believe that true travel is about connecting with people, understanding history, and savoring local flavors. Our dedicated team of travel enthusiasts and local experts curates every guide to ensure it&apos;s authentic, practical, and inspiring.
           </p>
         </div>
       </section>
@@ -285,7 +286,7 @@ export default function TravelGuideLanding() {
       {/* Guides Section */}
       <section id="guides" className="relative border-t border-slate-800/60">
         <div className="mx-auto max-w-7xl px-6 py-16">
-          <h2 className="text-2xl md:text-4xl font-semibold text-white">What You'll Find</h2>
+          <h2 className="text-2xl md:text-4xl font-semibold text-white">What You&apos;ll Find</h2>
           <div className="mt-10 grid md:grid-cols-3 gap-6">
             {[
               {
@@ -426,11 +427,11 @@ function Accordion() {
   const faqs = [
     {
       q: 'How do you create your travel guides?',
-      a: 'Our guides are meticulously researched and written by a team of experienced travelers and local experts who live in or have extensive knowledge of the destinations. We focus on providing authentic, practical advice that you won\'t find in standard guidebooks.',
+      a: 'Our guides are meticulously researched and written by a team of experienced travelers and local experts who live in or have extensive knowledge of the destinations. We focus on providing authentic, practical advice that you won&apos;t find in standard guidebooks.',
     },
     {
       q: 'Do you offer flight and hotel booking services?',
-      a: 'We provide links and guidance to the best flight and hotel booking platforms, but we don\'t handle the bookings directly. This allows us to remain unbiased and focus on providing the most helpful information for your trip planning.',
+      a: 'We provide links and guidance to the best flight and hotel booking platforms, but we don&apos;t handle the bookings directly. This allows us to remain unbiased and focus on providing the most helpful information for your trip planning.',
     },
     {
       q: 'Are the travel guides free to use?',
