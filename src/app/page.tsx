@@ -18,7 +18,7 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import Image from "next/image";
 
-const CONTACT_LINK = '#contact'; 
+const CONTACT_LINK = '#contact';
 
 const LOGO_SVG = (
   <svg
@@ -31,23 +31,23 @@ const LOGO_SVG = (
   >
     <path
       d="M12 2C8.68629 2 6 4.68629 6 8C6 12.8354 12 22 12 22C12 22 18 12.8354 18 8C18 4.68629 15.3137 2 12 2Z"
-      fill="#0f172a"
-      stroke="#0f172a"
+      fill="#fff" // Changed to white
+      stroke="#fff" // Changed to white
       strokeWidth="2"
       strokeLinecap="round"
       strokeLinejoin="round"
     />
-    <circle cx="12" cy="8" r="3" fill="#0ea5e9" />
+    <circle cx="12" cy="8" r="3" fill="#f97316" /> {/* Changed to orange-500 */}
     <path
       d="M16 11L18.9998 14.5L22 11"
-      stroke="#22d3ee"
+      stroke="#fb923c" // Changed to orange-400
       strokeWidth="2"
       strokeLinecap="round"
       strokeLinejoin="round"
     />
     <path
       d="M8 11L5.00018 14.5L2 11"
-      stroke="#22d3ee"
+      stroke="#fb923c" // Changed to orange-400
       strokeWidth="2"
       strokeLinecap="round"
       strokeLinejoin="round"
@@ -57,38 +57,38 @@ const LOGO_SVG = (
 
 export default function TravelGuideLanding() {
   return (
-    <main className="min-h-screen bg-slate-950 text-slate-100 relative overflow-hidden">
+    <main className="min-h-screen bg-orange-50 text-slate-950 relative overflow-hidden">
       {/* Aurora gradient background */}
       <div aria-hidden className="pointer-events-none absolute inset-0">
-        <div className="absolute -top-32 left-1/2 h-[60rem] w-[60rem] -translate-x-1/2 rounded-full blur-3xl opacity-40 bg-gradient-to-tr from-cyan-500/30 via-sky-400/20 to-fuchsia-500/20" />
-        <div className="absolute top-1/3 -left-24 h-[28rem] w-[28rem] rounded-full blur-3xl opacity-40 bg-gradient-to-tr from-blue-600/20 to-teal-400/20" />
+        <div className="absolute -top-32 left-1/2 h-[60rem] w-[60rem] -translate-x-1/2 rounded-full blur-3xl opacity-40 bg-gradient-to-tr from-orange-500/30 via-red-400/20 to-pink-500/20" />
+        <div className="absolute top-1/3 -left-24 h-[28rem] w-[28rem] rounded-full blur-3xl opacity-40 bg-gradient-to-tr from-pink-600/20 to-red-400/20" />
       </div>
 
       {/* Nav */}
-      <header className="sticky top-0 z-40 backdrop-blur supports-[backdrop-filter]:bg-slate-950/60">
+      <header className="sticky top-0 z-40 backdrop-blur supports-[backdrop-filter]:bg-white/80">
         <div className="mx-auto max-w-7xl px-6 py-4 flex items-center justify-between">
           <div className="flex items-center gap-3">
             {LOGO_SVG}
             <span className="text-xl font-semibold tracking-tight">
-              ZipTrip<span className="text-sky-400">Go</span>
+              ZipTrip<span className="text-orange-500">Go</span>
             </span>
           </div>
-          <nav className="hidden md:flex items-center gap-6 text-sm text-slate-100">
-            <a href="#destinations" className="hover:text-white">
+          <nav className="hidden md:flex items-center gap-6 text-sm text-slate-800">
+            <a href="#destinations" className="hover:text-red-500">
               Destinations
             </a>
-            <a href="#about" className="hover:text-white">
+            <a href="#about" className="hover:text-red-500">
               About
             </a>
-            <a href="#guides" className="hover:text-white">
+            <a href="#guides" className="hover:text-red-500">
               Guides
             </a>
-            <a href="#faq" className="hover:text-white">
+            <a href="#faq" className="hover:text-red-500">
               FAQ
             </a>
             <Button
               asChild
-              className="bg-sky-500 hover:bg-sky-400 text-slate-950 font-semibold"
+              className="bg-orange-500 hover:bg-orange-400 text-white font-semibold"
             >
               <a href={CONTACT_LINK}>Contact us</a>
             </Button>
@@ -107,18 +107,18 @@ export default function TravelGuideLanding() {
               transition={{ duration: 0.6 }}
               className="max-w-2xl"
             >
-              <h1 className="text-5xl md:text-7xl font-bold leading-tight tracking-tight">
-                Explore the World, <span className="text-sky-400">One Story</span> at a Time
+              <h1 className="text-5xl md:text-7xl font-bold leading-tight tracking-tight text-slate-950">
+                Explore the World, <span className="text-orange-500">One Story</span> at a Time
               </h1>
-              <p className="mt-5 text-lg md:text-xl text-slate-200">
-                Your ultimate guide to <span className="text-white">unforgettable travel</span>,
-                <span className="text-white"> authentic culture</span>, and <span className="text-white">local cuisine</span>.
+              <p className="mt-5 text-lg md:text-xl text-slate-700">
+                Your ultimate guide to <span className="text-slate-950">unforgettable travel</span>,
+                <span className="text-slate-950"> authentic culture</span>, and <span className="text-slate-950">local cuisine</span>.
               </p>
               <div className="mt-8 flex flex-col sm:flex-row gap-3">
                 <Button
                   asChild
                   size="lg"
-                  className="bg-sky-500 hover:bg-sky-400 text-slate-950 font-semibold shadow-[0_8px_20px_-8px_rgba(14,165,233,0.7)]"
+                  className="bg-orange-500 hover:bg-orange-400 text-white font-semibold shadow-[0_8px_20px_-8px_rgba(249,115,22,0.7)]"
                 >
                   <a href="#destinations">
                     Start exploring <ArrowRight className="ml-2 h-4 w-4" />
@@ -128,97 +128,85 @@ export default function TravelGuideLanding() {
                   variant="outline"
                   asChild
                   size="lg"
-                  className="border-sky-500 text-sky-300 hover:bg-slate-900/60 hover:text-sky-200"
+                  className="border-orange-500 text-orange-500 hover:bg-orange-50 hover:text-orange-600"
                 >
                   <a href="#about">Learn more</a>
                 </Button>
               </div>
             </motion.div>
 
-            {/* Right: visual panel */}
-            <motion.div
-              initial={{ opacity: 0, scale: 0.98 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.7, delay: 0.1 }}
-              className="relative"
-            >
-              <div className="relative overflow-hidden rounded-3xl border border-slate-800/80 bg-gradient-to-br from-slate-900/80 to-slate-900/40 p-6 md:p-8 shadow-[0_20px_80px_-20px_rgba(56,189,248,0.25)]">
-                {/* radial grid */}
-                <div
-                  aria-hidden
-                  className="pointer-events-none absolute inset-0 [mask-image:radial-gradient(60%_60%_at_70%_40%,black,transparent)]"
-                >
-                  <svg
-                    className="absolute -right-12 -top-12 h-[28rem] w-[28rem] opacity-30"
-                    viewBox="0 0 400 400"
-                  >
-                    <defs>
-                      <pattern id="grid" width="20" height="20" patternUnits="userSpaceOnUse">
-                        <path d="M 20 0 L 0 0 0 20" fill="none" stroke="#1e293b" strokeWidth="1" />
-                      </pattern>
-                    </defs>
-                    <rect width="400" height="400" fill="url(#grid)" />
-                  </svg>
-                </div>
+{/* Right: visual panel */}
+<motion.div
+  initial={{ opacity: 0, scale: 0.98 }}
+  animate={{ opacity: 1, scale: 1 }}
+  transition={{ duration: 0.7, delay: 0.1 }}
+  className="relative"
+>
+  <div className="relative overflow-hidden rounded-3xl border border-gray-200 bg-gradient-to-br from-white/80 to-white/40 p-6 md:p-8 shadow-[0_20px_80px_-20px_rgba(251,113,133,0.25)]">
+    {/* radial grid */}
+    <div
+      aria-hidden
+      className="pointer-events-none absolute inset-0 [mask-image:radial-gradient(60%_60%_at_70%_40%,black,transparent)]"
+    >
+      <svg
+        className="absolute -right-12 -top-12 h-[28rem] w-[28rem] opacity-30"
+        viewBox="0 0 400 400"
+      >
+        <defs>
+          <pattern id="grid" width="20" height="20" patternUnits="userSpaceOnUse">
+            <path d="M 20 0 L 0 0 0 20" fill="none" stroke="#e5e7eb" strokeWidth="1" />
+          </pattern>
+        </defs>
+        <rect width="400" height="400" fill="url(#grid)" />
+      </svg>
+    </div>
 
-                {/* floating blob */}
-                <motion.div
-                  className="absolute -right-6 -top-6 h-40 w-40 rounded-full bg-sky-500/20 blur-2xl"
-                  animate={{ y: [0, -8, 0], x: [0, 6, 0] }}
-                  transition={{ repeat: Infinity, duration: 6, ease: 'easeInOut' }}
-                />
+    {/* floating blob */}
+    <motion.div
+      className="absolute -right-6 -top-6 h-40 w-40 rounded-full bg-pink-500/20 blur-2xl"
+      animate={{ y: [0, -8, 0], x: [0, 6, 0] }}
+      transition={{ repeat: Infinity, duration: 6, ease: 'easeInOut' }}
+    />
 
-                {/* mock map / planner card */}
-                <div className="rounded-2xl border border-slate-800 bg-slate-950/70 backdrop-blur p-4">
-                  <div className="flex items-center gap-2 text-[10px] text-slate-400">
-                    <span className="h-2.5 w-2.5 rounded-full bg-red-500/60" />
-                    <span className="h-2.5 w-2.5 rounded-full bg-yellow-500/60" />
-                    <span className="h-2.5 w-2.5 rounded-full bg-green-500/60" />
-                    <span className="ml-auto">/guides/paris.json</span>
-                  </div>
-                  <pre className="mt-3 font-mono text-[12px] leading-relaxed text-slate-200">
-                    <code>{`{
-  "city": "Paris",
-  "country": "France",
-  "cuisine": [
-    "croissant",
-    "macaron",
-    "escargots"
-  ],
-  "attractions": [
-    "Eiffel Tower",
-    "Louvre Museum"
-  ],
-  "flights": {
-    "from": "major airports",
-    "duration": "7-9 hours"
-  }
-}`}</code>
-                  </pre>
-                </div>
+    {/* African wildlife image */}
+    <div className="rounded-2xl overflow-hidden border border-gray-200 shadow-lg">
+      <Image
+        src="/images/africa.jpg"
+        alt="A herd of elephants walking across the savanna at sunset in Africa."
+        width={1024}
+        height={683}
+        className="w-full h-auto object-cover"
+      />
+      <div className="p-4 bg-white/70">
+        <h4 className="text-lg font-semibold text-slate-950">Discover the Serengeti</h4>
+        <p className="mt-1 text-sm text-slate-800">
+          Experience the great migration in Tanzania and Kenya. Indulge in local dishes like Ugali and Nyama Choma. Flights from major hubs typically last 15-18 hours.
+        </p>
+      </div>
+    </div>
 
-                {/* stats badges */}
-                <div className="mt-4 grid grid-cols-2 gap-3">
-                  <div className="rounded-xl border border-slate-800 bg-slate-900/60 px-4 py-3">
-                    <div className="text-xs text-slate-400">Guides updated</div>
-                    <div className="text-lg font-semibold text-white">Weekly</div>
-                  </div>
-                  <div className="rounded-xl border border-slate-800 bg-slate-900/60 px-4 py-3">
-                    <div className="text-xs text-slate-400">User rating</div>
-                    <div className="text-lg font-semibold text-white">4.9/5</div>
-                  </div>
-                </div>
-              </div>
-            </motion.div>
+    {/* stats badges */}
+    <div className="mt-4 grid grid-cols-2 gap-3">
+      <div className="rounded-xl border border-gray-200 bg-orange-50 px-4 py-3">
+        <div className="text-xs text-slate-600">Guides updated</div>
+        <div className="text-lg font-semibold text-slate-950">Weekly</div>
+      </div>
+      <div className="rounded-xl border border-gray-200 bg-orange-50 px-4 py-3">
+        <div className="text-xs text-slate-600">User rating</div>
+        <div className="text-lg font-semibold text-slate-950">4.9/5</div>
+      </div>
+    </div>
+  </div>
+</motion.div>
           </div>
         </div>
       </section>
 
       {/* Featured Destinations */}
-      <section id="destinations" className="relative border-t border-slate-800/60">
+      <section id="destinations" className="relative border-t border-gray-200">
         <div className="mx-auto max-w-7xl px-6 py-16">
-          <h2 className="text-2xl md:text-4xl font-semibold text-white">Top Destinations</h2>
-          <p className="mt-2 text-slate-200 max-w-2xl">
+          <h2 className="text-2xl md:text-4xl font-semibold text-slate-950">Top Destinations</h2>
+          <p className="mt-2 text-slate-700 max-w-2xl">
             Explore our most popular and curated guides for your next trip.
           </p>
 
@@ -233,7 +221,7 @@ export default function TravelGuideLanding() {
               {
                 title: 'Paris, France',
                 description: 'The city of love and art.',
-                img: '/images/paris.jpg',
+                img: '/images/paris1.jpg',
                 icon: <Globe />,
               },
               {
@@ -245,7 +233,7 @@ export default function TravelGuideLanding() {
             ].map((d) => (
               <Card
                 key={d.title}
-                className="group bg-slate-900/60 border-slate-800 hover:border-sky-700/60 transition overflow-hidden"
+                className="group bg-white/60 border-gray-200 hover:border-orange-500/60 transition overflow-hidden"
               >
                 <div className="relative">
                   <Image
@@ -262,7 +250,7 @@ export default function TravelGuideLanding() {
                       {d.icon}
                       <span className="font-semibold text-white [text-shadow:0_2px_8px_rgba(0,0,0,0.65)]">{d.title}</span>
                     </div>
-                    <p className="mt-1 text-sm text-slate-200 [text-shadow:0_1px_6px_rgba(0,0,0,0.6)]">
+                    <p className="mt-1 text-slate-200 [text-shadow:0_1px_6px_rgba(0,0,0,0.6)]">
                       {d.description}
                     </p>
                   </div>
@@ -274,19 +262,19 @@ export default function TravelGuideLanding() {
       </section>
 
       {/* About Us */}
-      <section id="about" className="relative border-t border-slate-800/60">
+      <section id="about" className="relative border-t border-gray-200">
         <div className="mx-auto max-w-7xl px-6 py-16">
-          <h2 className="text-2xl md:text-4xl font-semibold text-white">Our Mission</h2>
-          <p className="mt-2 text-slate-200 max-w-2xl">
+          <h2 className="text-2xl md:text-4xl font-semibold text-slate-950">Our Mission</h2>
+          <p className="mt-2 text-slate-700 max-w-2xl">
             At ZipTripGo, our mission is to provide more than just travel tips; we offer a window into the soul of each destination. We believe that true travel is about connecting with people, understanding history, and savoring local flavors. Our dedicated team of travel enthusiasts and local experts curates every guide to ensure it&apos;s authentic, practical, and inspiring.
           </p>
         </div>
       </section>
 
       {/* Guides Section */}
-      <section id="guides" className="relative border-t border-slate-800/60">
+      <section id="guides" className="relative border-t border-gray-200">
         <div className="mx-auto max-w-7xl px-6 py-16">
-          <h2 className="text-2xl md:text-4xl font-semibold text-white">What You&apos;ll Find</h2>
+          <h2 className="text-2xl md:text-4xl font-semibold text-slate-950">What You&apos;ll Find</h2>
           <div className="mt-10 grid md:grid-cols-3 gap-6">
             {[
               {
@@ -319,15 +307,15 @@ export default function TravelGuideLanding() {
             ].map((s, i) => (
               <Card
                 key={i}
-                className="group bg-slate-900/60 border-slate-800 hover:border-sky-600/50 hover:shadow-[0_10px_40px_-10px_rgba(56,189,248,0.25)] transition-all"
+                className="group bg-white/60 border-gray-200 hover:border-orange-500/50 hover:shadow-[0_10px_40px_-10px_rgba(251,113,133,0.25)] transition-all"
               >
                 <CardHeader className="space-y-4 md:space-y-6">
-                  <div className="h-12 w-12 grid place-content-center rounded-xl bg-gradient-to-br from-sky-500/20 to-cyan-400/10 text-sky-300 ring-1 ring-sky-700/30 group-hover:from-sky-500/30 group-hover:to-cyan-400/20">
+                  <div className="h-12 w-12 grid place-content-center rounded-xl bg-gradient-to-br from-red-500/20 to-pink-400/10 text-pink-500 ring-1 ring-pink-700/30 group-hover:from-red-500/30 group-hover:to-pink-400/20">
                     <div className="h-6 w-6">{s.icon}</div>
                   </div>
-                  <CardTitle className="text-xl text-white">{s.title}</CardTitle>
+                  <CardTitle className="text-xl text-slate-950">{s.title}</CardTitle>
                 </CardHeader>
-                <CardContent className="text-slate-200 space-y-2">
+                <CardContent className="text-slate-700 space-y-2">
                   <ul className="list-disc list-inside space-y-1">
                     {s.bullets.map((b) => (
                       <li key={b}>{b}</li>
@@ -342,9 +330,9 @@ export default function TravelGuideLanding() {
 
 
       {/* Testimonials (re-skinned as User stories) */}
-      <section className="relative border-t border-slate-800/60">
+      <section className="relative border-t border-gray-200">
         <div className="mx-auto max-w-7xl px-6 py-16">
-          <h2 className="text-2xl md:text-4xl font-semibold text-white">Traveler Stories</h2>
+          <h2 className="text-2xl md:text-4xl font-semibold text-slate-950">Traveler Stories</h2>
           <div className="mt-8 overflow-x-auto">
             <div className="grid auto-cols-[minmax(300px,1fr)] grid-flow-col gap-4 pr-6">
               {[
@@ -352,13 +340,13 @@ export default function TravelGuideLanding() {
                 { q: 'The flight tips saved me hundreds of dollars.', a: 'David L., Budget Traveler' },
                 { q: 'The cultural section helped me feel truly prepared.', a: 'Emily T., Solo Explorer' },
               ].map((t, i) => (
-                <Card key={i} className="bg-slate-900/60 border-slate-800 min-w-[300px]">
-                  <CardContent className="pt-6 pb-5 text-slate-200 text-sm space-y-3">
+                <Card key={i} className="bg-white/60 border-gray-200 min-w-[300px]">
+                  <CardContent className="pt-6 pb-5 text-slate-800 text-sm space-y-3">
                     <div className="flex items-center gap-3">
-                      <div className="h-8 w-8 rounded-full bg-slate-800 grid place-content-center text-slate-300">
+                      <div className="h-8 w-8 rounded-full bg-orange-100 grid place-content-center text-orange-600">
                         <User2 className="h-4 w-4" />
                       </div>
-                      <div className="text-xs text-slate-400">{t.a}</div>
+                      <div className="text-xs text-slate-600">{t.a}</div>
                     </div>
                     <p>“{t.q}”</p>
                   </CardContent>
@@ -370,22 +358,22 @@ export default function TravelGuideLanding() {
       </section>
 
       {/* FAQ (Accordion) */}
-      <section id="faq" className="relative border-t border-slate-800/60">
+      <section id="faq" className="relative border-t border-gray-200">
         <div className="mx-auto max-w-7xl px-6 py-16">
-          <h2 className="text-2xl md:text-4xl font-semibold text-white">FAQ</h2>
+          <h2 className="text-2xl md:text-4xl font-semibold text-slate-950">FAQ</h2>
           <Accordion />
         </div>
       </section>
 
       {/* CTA */}
-      <section id="contact" className="relative border-t border-slate-800/60">
+      <section id="contact" className="relative border-t border-gray-200">
         <div className="mx-auto max-w-7xl px-6 py-16">
-          <div className="rounded-3xl border border-slate-800 bg-gradient-to-br from-slate-900/80 to-slate-900/40 p-8 md:p-10 flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
+          <div className="rounded-3xl border border-gray-200 bg-gradient-to-br from-white/80 to-white/40 p-8 md:p-10 flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
             <div>
-              <h3 className="text-2xl md:text-3xl font-semibold text-white">Have a question or a story to share?</h3>
-              <p className="mt-1 text-slate-200">Our team is always here to help you plan your next great adventure.</p>
+              <h3 className="text-2xl md:text-3xl font-semibold text-slate-950">Have a question or a story to share?</h3>
+              <p className="mt-1 text-slate-700">Our team is always here to help you plan your next great adventure.</p>
             </div>
-            <Button asChild size="lg" className="bg-sky-500 hover:bg-sky-400 text-slate-950 font-semibold shadow-[0_0_24px_rgba(56,189,248,0.45)]">
+            <Button asChild size="lg" className="bg-orange-500 hover:bg-orange-400 text-white font-semibold shadow-[0_0_24px_rgba(249,115,22,0.45)]">
               <a href={CONTACT_LINK}><MessageSquare className="mr-2 h-4 w-4"/> Contact us</a>
             </Button>
           </div>
@@ -393,19 +381,19 @@ export default function TravelGuideLanding() {
       </section>
 
       {/* Footer */}
-      <footer className="border-t border-slate-800/60">
-        <div className="mx-auto max-w-7xl px-6 py-10 text-sm text-slate-200 flex flex-col md:flex-row items-center justify-between gap-4">
+      <footer className="border-t border-gray-200">
+        <div className="mx-auto max-w-7xl px-6 py-10 text-sm text-slate-700 flex flex-col md:flex-row items-center justify-between gap-4">
           <div className="flex items-center gap-2">{LOGO_SVG}<span>ZipTripGo</span></div>
           <div className="flex items-center gap-4">
-            <a className="hover:text-white" href="#destinations">Destinations</a>
-            <a className="hover:text-white" href="#about">About</a>
-            <a className="hover:text-white" href="#guides">Guides</a>
-            <a className="hover:text-white" href="#faq">FAQ</a>
+            <a className="hover:text-orange-500" href="#destinations">Destinations</a>
+            <a className="hover:text-orange-500" href="#about">About</a>
+            <a className="hover:text-orange-500" href="#guides">Guides</a>
+            <a className="hover:text-orange-500" href="#faq">FAQ</a>
           </div>
           <div className="flex items-center gap-4">
-            <a className="flex items-center gap-2 hover:text-white" href="https://github.com" target="_blank" rel="noreferrer"><Github className="h-4 w-4"/> GitHub</a>
-            <a className="flex items-center gap-2 hover:text-white" href="https://www.linkedin.com" target="_blank" rel="noreferrer"><Linkedin className="h-4 w-4"/> LinkedIn</a>
-            <a className="flex items-center gap-2 hover:text-white" href={CONTACT_LINK}><Ticket className="h-4 w-4"/> Fiverr</a>
+            <a className="flex items-center gap-2 hover:text-orange-500" href="https://github.com" target="_blank" rel="noreferrer"><Github className="h-4 w-4"/> GitHub</a>
+            <a className="flex items-center gap-2 hover:text-orange-500" href="https://www.linkedin.com" target="_blank" rel="noreferrer"><Linkedin className="h-4 w-4"/> LinkedIn</a>
+            <a className="flex items-center gap-2 hover:text-orange-500" href={CONTACT_LINK}><Ticket className="h-4 w-4"/> Fiverr</a>
           </div>
           <div>© {new Date().getFullYear()} ZipTripGo. All rights reserved.</div>
         </div>
@@ -414,7 +402,7 @@ export default function TravelGuideLanding() {
       {/* Sticky Mobile CTA */}
       <a
         href={CONTACT_LINK}
-        className="fixed md:hidden bottom-4 left-1/2 -translate-x-1/2 z-50 px-5 py-3 rounded-full bg-sky-500 text-slate-950 font-semibold shadow-[0_10px_30px_-10px_rgba(56,189,248,0.6)] hover:bg-sky-400 focus-visible:outline-none focus-visible:ring-2 ring-sky-400"
+        className="fixed md:hidden bottom-4 left-1/2 -translate-x-1/2 z-50 px-5 py-3 rounded-full bg-orange-500 text-white font-semibold shadow-[0_10px_30px_-10px_rgba(249,115,22,0.6)] hover:bg-orange-400 focus-visible:outline-none focus-visible:ring-2 ring-orange-400"
       >
         Contact Us
       </a>
@@ -444,20 +432,20 @@ function Accordion() {
   ];
 
   return (
-    <div className="mt-6 rounded-2xl border border-slate-800 bg-slate-900/40">
+    <div className="mt-6 rounded-2xl border border-gray-200 bg-white/40">
       {faqs.map((f, idx) => {
         const isOpen = open === idx;
         return (
-          <div key={f.q} className={`border-b last:border-none ${isOpen ? 'border-sky-700/40' : 'border-slate-800'}`}>
+          <div key={f.q} className={`border-b last:border-none ${isOpen ? 'border-orange-500/40' : 'border-gray-200'}`}>
             <button
               onClick={() => setOpen(isOpen ? null : idx)}
-              className={`w-full text-left px-5 py-4 hover:bg-slate-900/70 ${isOpen ? 'bg-slate-900/70' : ''}`}
+              className={`w-full text-left px-5 py-4 hover:bg-orange-50/70 ${isOpen ? 'bg-orange-50/70' : ''}`}
             >
               <div className="flex items-start justify-between gap-4">
-                <span className="font-medium text-slate-100 text-base md:text-lg">{f.q}</span>
-                <span className="text-sky-400">{isOpen ? '−' : '+'}</span>
+                <span className="font-medium text-slate-950 text-base md:text-lg">{f.q}</span>
+                <span className="text-orange-500">{isOpen ? '−' : '+'}</span>
               </div>
-              {isOpen && <p className="mt-2 text-sm text-slate-200">{f.a}</p>}
+              {isOpen && <p className="mt-2 text-sm text-slate-800">{f.a}</p>}
             </button>
           </div>
         );
